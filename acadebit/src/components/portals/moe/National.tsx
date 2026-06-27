@@ -15,7 +15,7 @@ export default function NationalDash() {
           <h1 style={{ color: "var(--text)", fontSize: 22, fontWeight: 800 }}>Ministry of Education</h1>
           <span className="badge" style={{ background: "rgba(99,102,241,.1)", color: "var(--indigo)" }}>GovBridge™</span>
         </div>
-        <p style={{ color: "var(--text-muted)", fontSize: 13 }}>National CBC Compliance & School Performance Dashboard</p>
+        <p style={{ color: "var(--muted)", fontSize: 13 }}>National CBC Compliance & School Performance Dashboard</p>
       </div>
 
       {/* Stats */}
@@ -29,7 +29,7 @@ export default function NationalDash() {
           <div key={s.label} className="stat-card">
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <div>
-                <p style={{ color: "var(--text-muted)", fontSize: 11 }}>{s.label}</p>
+                <p style={{ color: "var(--muted)", fontSize: 11 }}>{s.label}</p>
                 <p style={{ color: s.color, fontSize: 24, fontWeight: 800, fontFamily: "DM Mono" }}>{s.value}</p>
                 {s.delta && <span style={{ color: "var(--green)", fontSize: 11, fontWeight: 600 }}>{s.delta} this year</span>}
               </div>
@@ -46,14 +46,14 @@ export default function NationalDash() {
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={COUNTY_DATA}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-              <XAxis dataKey="county" tick={{ fill: "var(--text-muted)", fontSize: 10 }} />
-              <YAxis domain={[0, 100]} tickFormatter={(v) => `${v}%`} tick={{ fill: "var(--text-muted)", fontSize: 10 }} />
+              <XAxis dataKey="county" tick={{ fill: "var(--muted)", fontSize: 10 }} />
+              <YAxis domain={[0, 100]} tickFormatter={(v) => `${v}%`} tick={{ fill: "var(--muted)", fontSize: 10 }} />
               <Tooltip
                 contentStyle={{ background: "var(--card2)", border: "1px solid var(--border)", borderRadius: 8 }}
                 formatter={(v) => [`${v}%`, "Compliance"]}
               />
               <Bar dataKey="compliance" radius={[4, 4, 0, 0]} fill="var(--indigo)"
-                label={{ position: "top", fill: "var(--text-muted)", fontSize: 10, formatter: (v: unknown) => `${v}%` }}
+                label={{ position: "top", fill: "var(--muted)", fontSize: 10, formatter: (v: unknown) => `${v}%` }}
               />
             </BarChart>
           </ResponsiveContainer>

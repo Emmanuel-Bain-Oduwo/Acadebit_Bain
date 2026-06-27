@@ -54,8 +54,8 @@ export default function MyChild() {
         <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(20,184,166,.3)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 28 }}>👦</div>
         <div style={{ flex: 1 }}>
           <h2 style={{ color: "var(--text)", fontSize: 20, fontWeight: 800 }}>Brian Omondi</h2>
-          <p style={{ color: "var(--text-muted)", fontSize: 13 }}>Grade 8A · Adm: MJA/2021/045</p>
-          <p style={{ color: "var(--text-muted)", fontSize: 12 }}>Mwangaza Junior Academy · Term 2, 2026</p>
+          <p style={{ color: "var(--muted)", fontSize: 13 }}>Grade 8A · Adm: MJA/2021/045</p>
+          <p style={{ color: "var(--muted)", fontSize: 12 }}>Mwangaza Junior Academy · Term 2, 2026</p>
         </div>
         <span className="badge" style={{ background: "rgba(34,197,94,.1)", color: "var(--green)" }}>✅ On Campus · Arrived 7:02 AM</span>
       </div>
@@ -70,7 +70,7 @@ export default function MyChild() {
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
                   <span style={{ color: "var(--text)", fontSize: 12 }}>{s.name}</span>
                   <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                    <span style={{ color: "var(--text-muted)", fontSize: 11 }}>{s.pct}%</span>
+                    <span style={{ color: "var(--muted)", fontSize: 11 }}>{s.pct}%</span>
                     <span className="badge" style={{ background: `${COMP_COLORS[s.label]}20`, color: COMP_COLORS[s.label], fontSize: 9 }}>{s.label}</span>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ export default function MyChild() {
                 </div>
                 <div>
                   <p style={{ color: "var(--text)", fontSize: 12, fontWeight: 500 }}>{t.event}</p>
-                  <p style={{ color: "var(--text-muted)", fontSize: 10, fontFamily: "DM Mono" }}>{t.time}</p>
+                  <p style={{ color: "var(--muted)", fontSize: 10, fontFamily: "DM Mono" }}>{t.time}</p>
                 </div>
               </div>
             ))}
@@ -105,14 +105,14 @@ export default function MyChild() {
         <div className="card">
           <h3 style={{ color: "var(--text)", fontSize: 14, fontWeight: 700, marginBottom: 12 }}>💳 Fee Balance</h3>
           <div style={{ padding: 14, background: "rgba(239,68,68,.05)", border: "1px solid rgba(239,68,68,.2)", borderRadius: 8, marginBottom: 12 }}>
-            <p style={{ color: "var(--text-muted)", fontSize: 12 }}>Outstanding Balance</p>
+            <p style={{ color: "var(--muted)", fontSize: 12 }}>Outstanding Balance</p>
             <p style={{ color: "var(--red)", fontSize: 28, fontWeight: 800, fontFamily: "DM Mono" }}>KES 25,200</p>
-            <p style={{ color: "var(--text-muted)", fontSize: 11 }}>Due: 30 June 2026</p>
+            <p style={{ color: "var(--muted)", fontSize: 11 }}>Due: 30 June 2026</p>
           </div>
           <button onClick={() => setPayOpen(true)} className="btn btn-primary" style={{ width: "100%", justifyContent: "center" }}>
             📱 Pay via M-Pesa
           </button>
-          <p style={{ color: "var(--text-muted)", fontSize: 11, textAlign: "center", marginTop: 8 }}>Installment plans available</p>
+          <p style={{ color: "var(--muted)", fontSize: 11, textAlign: "center", marginTop: 8 }}>Installment plans available</p>
 
           <div style={{ display: "flex", gap: 8, marginTop: 12 }}>
             <button onClick={() => setPortal("shop")} className="btn btn-secondary" style={{ flex: 1, justifyContent: "center", fontSize: 12 }}>📚 Textbooks</button>
@@ -147,7 +147,7 @@ export default function MyChild() {
             ].map((a, i) => (
               <div key={i} style={{ padding: "8px 10px", background: "var(--card2)", borderRadius: 8, marginBottom: 6 }}>
                 <p style={{ color: "var(--text)", fontSize: 12, fontWeight: 600 }}>{a.title}</p>
-                <p style={{ color: "var(--text-muted)", fontSize: 11 }}>{a.msg}</p>
+                <p style={{ color: "var(--muted)", fontSize: 11 }}>{a.msg}</p>
               </div>
             ))}
           </div>

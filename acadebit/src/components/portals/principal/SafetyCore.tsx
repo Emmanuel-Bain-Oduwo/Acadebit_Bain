@@ -45,7 +45,7 @@ export default function SafetyCore() {
         <Shield size={22} style={{ color: "var(--green)" }} />
         <div>
           <h1 style={{ color: "var(--text)", fontSize: 22, fontWeight: 800 }}>SafetyCore™</h1>
-          <p style={{ color: "var(--text-muted)", fontSize: 13 }}>Campus Safety & Security Management</p>
+          <p style={{ color: "var(--muted)", fontSize: 13 }}>Campus Safety & Security Management</p>
         </div>
       </div>
 
@@ -66,7 +66,7 @@ export default function SafetyCore() {
             <AlertTriangle size={20} style={{ color: "var(--red)" }} />
             <div>
               <p style={{ color: "var(--red)", fontWeight: 700, fontSize: 14 }}>🚨 EMERGENCY ACTIVE — {fmtTime(elapsed)}</p>
-              <p style={{ color: "var(--text-muted)", fontSize: 12 }}>Notifying 255 parents · Security alerted · Gates locked</p>
+              <p style={{ color: "var(--muted)", fontSize: 12 }}>Notifying 255 parents · Security alerted · Gates locked</p>
             </div>
           </div>
           <span className="badge" style={{ background: "rgba(239,68,68,.1)", color: "var(--red)" }}>LIVE</span>
@@ -97,7 +97,7 @@ export default function SafetyCore() {
           <span style={{ fontSize: 32 }}>🚨</span>
           {emergencyActive ? "DEACTIVATE" : "ACTIVATE"}<br />EMERGENCY
         </button>
-        <p style={{ color: "var(--text-muted)", fontSize: 12, marginTop: 12 }}>
+        <p style={{ color: "var(--muted)", fontSize: 12, marginTop: 12 }}>
           {emergencyActive ? "Click to clear emergency alert" : "Click to trigger campus-wide emergency"}
         </p>
       </div>
@@ -111,7 +111,7 @@ export default function SafetyCore() {
         ].map((s) => (
           <div key={s.label} className="stat-card" style={{ textAlign: "center" }}>
             <p style={{ color: s.color, fontSize: 32, fontWeight: 800, fontFamily: "DM Mono" }}>{s.value}</p>
-            <p style={{ color: "var(--text-muted)", fontSize: 12 }}>{s.label}</p>
+            <p style={{ color: "var(--muted)", fontSize: 12 }}>{s.label}</p>
           </div>
         ))}
       </div>
@@ -128,7 +128,7 @@ export default function SafetyCore() {
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
                     <span style={{ color: "var(--text)", fontSize: 12 }}>{c.class}</span>
                     <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                      <span style={{ color: "var(--text-muted)", fontSize: 11 }}>{c.present}/{c.total}</span>
+                      <span style={{ color: "var(--muted)", fontSize: 11 }}>{c.present}/{c.total}</span>
                       <span className="badge" style={{ background: `${STATUS_COLORS[c.status]}20`, color: STATUS_COLORS[c.status], fontSize: 10 }}>{c.status}</span>
                     </div>
                   </div>
@@ -150,7 +150,7 @@ export default function SafetyCore() {
                 <span style={{ fontSize: 20 }}>{f.icon}</span>
                 <div>
                   <p style={{ color: "var(--text)", fontSize: 13, fontWeight: 600 }}>{f.title}</p>
-                  <p style={{ color: "var(--text-muted)", fontSize: 11 }}>{f.desc}</p>
+                  <p style={{ color: "var(--muted)", fontSize: 11 }}>{f.desc}</p>
                 </div>
               </div>
             ))}

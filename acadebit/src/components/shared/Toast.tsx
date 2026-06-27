@@ -34,7 +34,7 @@ export default function ToastContainer() {
             display: "flex",
             alignItems: "center",
             gap: 10,
-            boxShadow: "0 8px 32px rgba(0,0,0,.5)",
+            boxShadow: "var(--shadow-lg)",
             pointerEvents: "all",
             color: "var(--text)",
             fontSize: 13,
@@ -45,7 +45,7 @@ export default function ToastContainer() {
           <span style={{ flex: 1 }}>{t.message}</span>
           <button
             onClick={() => removeToast(t.id)}
-            style={{ color: "var(--text-muted)", cursor: "pointer", background: "none", border: "none", padding: 2, flexShrink: 0 }}
+            style={{ color: "var(--muted)", cursor: "pointer", background: "none", border: "none", padding: 2, flexShrink: 0 }}
           >
             <X size={14} />
           </button>

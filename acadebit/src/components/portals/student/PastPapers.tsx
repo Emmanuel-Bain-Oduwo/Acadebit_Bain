@@ -41,7 +41,7 @@ export default function PastPapers() {
         ].map((s) => (
           <div key={s.label} className="stat-card" style={{ textAlign: "center" }}>
             <p style={{ color: s.color, fontSize: 18, fontWeight: 800 }}>{s.value}</p>
-            <p style={{ color: "var(--text-muted)", fontSize: 11 }}>{s.label}</p>
+            <p style={{ color: "var(--muted)", fontSize: 11 }}>{s.label}</p>
           </div>
         ))}
       </div>
@@ -57,7 +57,7 @@ export default function PastPapers() {
               border: `1px solid ${activeType === f ? "var(--purple)" : "var(--border)"}`,
               borderRadius: 100,
               padding: "5px 14px",
-              color: activeType === f ? "var(--purple)" : "var(--text-muted)",
+              color: activeType === f ? "var(--purple)" : "var(--muted)",
               fontSize: 12, fontWeight: activeType === f ? 600 : 400,
               cursor: "pointer",
             }}
@@ -74,7 +74,7 @@ export default function PastPapers() {
               border: `1px solid ${activeSubj === f ? "var(--blue)" : "var(--border)"}`,
               borderRadius: 100,
               padding: "5px 14px",
-              color: activeSubj === f ? "var(--blue)" : "var(--text-muted)",
+              color: activeSubj === f ? "var(--blue)" : "var(--muted)",
               fontSize: 12, fontWeight: activeSubj === f ? 600 : 400,
               cursor: "pointer",
             }}
@@ -98,10 +98,10 @@ export default function PastPapers() {
                   </span>
                 </div>
                 <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
-                  <span style={{ color: "var(--text-muted)", fontSize: 11 }}>{p.marks} marks · {p.duration}</span>
+                  <span style={{ color: "var(--muted)", fontSize: 11 }}>{p.marks} marks · {p.duration}</span>
                   <span className="badge" style={{
                     background: p.status === "New" ? "rgba(168,85,247,.1)" : p.status.includes("Best") ? "rgba(34,197,94,.1)" : "rgba(30,35,48,1)",
-                    color: p.status === "New" ? "var(--purple)" : p.status.includes("Best") ? "var(--green)" : "var(--text-muted)",
+                    color: p.status === "New" ? "var(--purple)" : p.status.includes("Best") ? "var(--green)" : "var(--muted)",
                     fontSize: 9,
                   }}>{p.status}</span>
                 </div>
@@ -121,7 +121,7 @@ export default function PastPapers() {
           {/* AI Intelligence */}
           <div style={{ padding: 14, background: "rgba(245,158,11,.05)", border: "1px solid rgba(245,158,11,.2)", borderRadius: "var(--radius)" }}>
             <p style={{ color: "var(--amber)", fontWeight: 700, fontSize: 13, marginBottom: 4 }}>🤖 AI Topic Intelligence</p>
-            <p style={{ color: "var(--text-muted)", fontSize: 12, lineHeight: 1.6 }}>
+            <p style={{ color: "var(--muted)", fontSize: 12, lineHeight: 1.6 }}>
               <strong style={{ color: "var(--text)" }}>Quadratic Equations</strong> has appeared in <strong style={{ color: "var(--amber)" }}>14 of the last 20 KCSE papers</strong> (70%). Focus on factorisation, completing the square, and the quadratic formula. Likely to appear in Paper 1.
             </p>
           </div>
@@ -132,8 +132,8 @@ export default function PastPapers() {
             <ResponsiveContainer width="100%" height={180}>
               <LineChart data={HISTORY}>
                 <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                <XAxis dataKey="year" tick={{ fill: "var(--text-muted)", fontSize: 10 }} />
-                <YAxis domain={[40, 100]} tick={{ fill: "var(--text-muted)", fontSize: 10 }} />
+                <XAxis dataKey="year" tick={{ fill: "var(--muted)", fontSize: 10 }} />
+                <YAxis domain={[40, 100]} tick={{ fill: "var(--muted)", fontSize: 10 }} />
                 <Tooltip contentStyle={{ background: "var(--card2)", border: "1px solid var(--border)", borderRadius: 8 }} />
                 <Line type="monotone" dataKey="score" stroke="var(--purple)" strokeWidth={2} dot={{ fill: "var(--purple)", r: 4 }} name="Score %" />
               </LineChart>

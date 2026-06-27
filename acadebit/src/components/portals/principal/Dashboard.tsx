@@ -51,7 +51,7 @@ export default function PrincipalDashboard() {
       <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
         <div>
           <h1 style={{ color: "var(--text)", fontSize: 22, fontWeight: 800 }}>Mwangaza Junior Academy</h1>
-          <p style={{ color: "var(--text-muted)", fontSize: 13 }}>Term 2, Week 7 · Friday, 27 June 2026</p>
+          <p style={{ color: "var(--muted)", fontSize: 13 }}>Term 2, Week 7 · Friday, 27 June 2026</p>
         </div>
         <div style={{ display: "flex", gap: 8 }}>
           <span className="badge" style={{ background: "rgba(34,197,94,.1)", color: "var(--green)" }}>● 243 Present</span>
@@ -65,9 +65,9 @@ export default function PrincipalDashboard() {
           <div key={s.label} className="stat-card">
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
               <div>
-                <p style={{ color: "var(--text-muted)", fontSize: 12, marginBottom: 4 }}>{s.label}</p>
+                <p style={{ color: "var(--muted)", fontSize: 12, marginBottom: 4 }}>{s.label}</p>
                 <p style={{ color: s.color, fontSize: 28, fontWeight: 800, fontFamily: "DM Mono, monospace" }}>{s.value}</p>
-                <p style={{ color: "var(--text-muted)", fontSize: 11 }}>{s.sub}</p>
+                <p style={{ color: "var(--muted)", fontSize: 11 }}>{s.sub}</p>
               </div>
               <span style={{ fontSize: 24 }}>{s.icon}</span>
             </div>
@@ -82,8 +82,8 @@ export default function PrincipalDashboard() {
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={FEE_DATA} barGap={4}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-              <XAxis dataKey="month" tick={{ fill: "var(--text-muted)", fontSize: 11 }} />
-              <YAxis tickFormatter={(v) => `${v / 1000}K`} tick={{ fill: "var(--text-muted)", fontSize: 11 }} />
+              <XAxis dataKey="month" tick={{ fill: "var(--muted)", fontSize: 11 }} />
+              <YAxis tickFormatter={(v) => `${v / 1000}K`} tick={{ fill: "var(--muted)", fontSize: 11 }} />
               <Tooltip
                 contentStyle={{ background: "var(--card2)", border: "1px solid var(--border)", borderRadius: 8 }}
                 formatter={(v) => [formatKES(Number(v)), ""]}
@@ -119,7 +119,7 @@ export default function PrincipalDashboard() {
               >
                 <div>
                   <p style={{ color: "var(--text)", fontSize: 13, fontWeight: 600 }}>{s.name}</p>
-                  <p style={{ color: "var(--text-muted)", fontSize: 11 }}>{s.issue}</p>
+                  <p style={{ color: "var(--muted)", fontSize: 11 }}>{s.issue}</p>
                 </div>
                 <span className="badge" style={{
                   background: s.severity === "HIGH" ? "rgba(239,68,68,.1)" : "rgba(245,158,11,.1)",
@@ -138,7 +138,7 @@ export default function PrincipalDashboard() {
               <div key={i} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "6px 0", borderBottom: "1px solid var(--border)" }}>
                 <div>
                   <p style={{ color: "var(--text)", fontSize: 12, fontWeight: 500 }}>{g.name}</p>
-                  <p style={{ color: "var(--text-muted)", fontSize: 10, fontFamily: "DM Mono, monospace" }}>{g.time}</p>
+                  <p style={{ color: "var(--muted)", fontSize: 10, fontFamily: "DM Mono, monospace" }}>{g.time}</p>
                 </div>
                 <span className="badge" style={{ background: `${BADGE_COLORS[g.badge]}20`, color: BADGE_COLORS[g.badge] }}>{g.badge}</span>
               </div>
@@ -157,7 +157,7 @@ export default function PrincipalDashboard() {
                 <div key={c.class}>
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
                     <span style={{ color: "var(--text)", fontSize: 12 }}>{c.class}</span>
-                    <span style={{ color: "var(--text-muted)", fontSize: 11 }}>{c.present}/{total} · {pct}%</span>
+                    <span style={{ color: "var(--muted)", fontSize: 11 }}>{c.present}/{total} · {pct}%</span>
                   </div>
                   <div className="progress-bar">
                     <div className="progress-fill" style={{ width: `${pct}%`, background: pct >= 95 ? "var(--green)" : pct >= 85 ? "var(--amber)" : "var(--red)" }} />

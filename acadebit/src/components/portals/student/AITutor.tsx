@@ -75,7 +75,7 @@ export default function AITutor() {
               <button
                 key={q.label}
                 onClick={() => send(q.text)}
-                style={{ background: "var(--card2)", border: "1px solid var(--border)", borderRadius: 100, padding: "3px 10px", color: "var(--text-muted)", fontSize: 11, cursor: "pointer" }}
+                style={{ background: "var(--card2)", border: "1px solid var(--border)", borderRadius: 100, padding: "3px 10px", color: "var(--muted)", fontSize: 11, cursor: "pointer" }}
               >
                 {q.label}
               </button>
@@ -103,7 +103,7 @@ export default function AITutor() {
             {typing && (
               <div style={{ display: "flex", gap: 4, padding: "8px 12px", background: "var(--card2)", borderRadius: "12px 12px 12px 4px", width: "fit-content" }}>
                 {[0, 1, 2].map((i) => (
-                  <span key={i} className="typing-dot" style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--text-muted)", display: "inline-block" }} />
+                  <span key={i} className="typing-dot" style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--muted)", display: "inline-block" }} />
                 ))}
               </div>
             )}
@@ -158,7 +158,7 @@ export default function AITutor() {
                 </div>
               </div>
             </div>
-            <p style={{ color: "var(--text-muted)", fontSize: 11, textAlign: "center", margin: "6px 0 10px" }}>Click card to flip</p>
+            <p style={{ color: "var(--muted)", fontSize: 11, textAlign: "center", margin: "6px 0 10px" }}>Click card to flip</p>
             <div style={{ display: "flex", gap: 8 }}>
               <button onClick={() => nextCard()} className="btn btn-secondary" style={{ flex: 1, justifyContent: "center", fontSize: 12 }}>
                 ✗ Didn&apos;t know
@@ -175,8 +175,8 @@ export default function AITutor() {
             <ResponsiveContainer width="100%" height={150}>
               <LineChart data={TEST_SCORES}>
                 <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-                <XAxis dataKey="week" tick={{ fill: "var(--text-muted)", fontSize: 10 }} />
-                <YAxis domain={[50, 100]} tick={{ fill: "var(--text-muted)", fontSize: 10 }} />
+                <XAxis dataKey="week" tick={{ fill: "var(--muted)", fontSize: 10 }} />
+                <YAxis domain={[50, 100]} tick={{ fill: "var(--muted)", fontSize: 10 }} />
                 <Tooltip contentStyle={{ background: "var(--card2)", border: "1px solid var(--border)", borderRadius: 8 }} />
                 <Line type="monotone" dataKey="brian" stroke="var(--purple)" strokeWidth={2} dot={{ fill: "var(--purple)", r: 3 }} name="Brian" />
                 <Line type="monotone" dataKey="classAvg" stroke="var(--border)" strokeWidth={2} strokeDasharray="4 4" name="Class Avg" />

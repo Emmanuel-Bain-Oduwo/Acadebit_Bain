@@ -18,7 +18,7 @@ export default function FeeSmart() {
     <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
       <div>
         <h1 style={{ color: "var(--text)", fontSize: 22, fontWeight: 800 }}>FeeSmart™</h1>
-        <p style={{ color: "var(--text-muted)", fontSize: 13 }}>Fee Management & M-Pesa Integration</p>
+        <p style={{ color: "var(--muted)", fontSize: 13 }}>Fee Management & M-Pesa Integration</p>
       </div>
 
       {/* Stats */}
@@ -32,7 +32,7 @@ export default function FeeSmart() {
           <div key={s.label} className="stat-card">
             <div style={{ display: "flex", justifyContent: "space-between" }}>
               <div>
-                <p style={{ color: "var(--text-muted)", fontSize: 12 }}>{s.label}</p>
+                <p style={{ color: "var(--muted)", fontSize: 12 }}>{s.label}</p>
                 <p style={{ color: s.color, fontSize: 22, fontWeight: 800, fontFamily: "DM Mono" }}>{s.value}</p>
               </div>
               <span style={{ fontSize: 22 }}>{s.icon}</span>
@@ -48,8 +48,8 @@ export default function FeeSmart() {
           <ResponsiveContainer width="100%" height={200}>
             <LineChart data={FEE_DATA}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-              <XAxis dataKey="month" tick={{ fill: "var(--text-muted)", fontSize: 11 }} />
-              <YAxis tickFormatter={(v) => `${v / 1000}K`} tick={{ fill: "var(--text-muted)", fontSize: 11 }} />
+              <XAxis dataKey="month" tick={{ fill: "var(--muted)", fontSize: 11 }} />
+              <YAxis tickFormatter={(v) => `${v / 1000}K`} tick={{ fill: "var(--muted)", fontSize: 11 }} />
               <Tooltip
                 contentStyle={{ background: "var(--card2)", border: "1px solid var(--border)", borderRadius: 8 }}
                 formatter={(v) => [formatKES(Number(v)), ""]}
@@ -73,7 +73,7 @@ export default function FeeSmart() {
               <div key={p.mpesa} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "8px 10px", background: "var(--card2)", borderRadius: 8 }}>
                 <div>
                   <p style={{ color: "var(--text)", fontSize: 12, fontWeight: 500 }}>{p.name}</p>
-                  <p style={{ color: "var(--text-muted)", fontSize: 10, fontFamily: "DM Mono" }}>{p.mpesa} · {p.time}</p>
+                  <p style={{ color: "var(--muted)", fontSize: 10, fontFamily: "DM Mono" }}>{p.mpesa} · {p.time}</p>
                 </div>
                 <span style={{ color: "var(--green)", fontWeight: 700, fontSize: 13, fontFamily: "DM Mono" }}>+{formatKES(p.amount)}</span>
               </div>
@@ -83,7 +83,7 @@ export default function FeeSmart() {
           {/* M-Pesa info box */}
           <div style={{ marginTop: 12, padding: 12, background: "rgba(34,197,94,.05)", border: "1px solid rgba(34,197,94,.15)", borderRadius: 8 }}>
             <p style={{ color: "var(--green)", fontSize: 11, fontWeight: 600 }}>M-Pesa Flow</p>
-            <p style={{ color: "var(--text-muted)", fontSize: 11 }}>Parent pays → MPESA confirms → Acadebit auto-allocates → SMS receipt sent → Balance updated in real-time</p>
+            <p style={{ color: "var(--muted)", fontSize: 11 }}>Parent pays → MPESA confirms → Acadebit auto-allocates → SMS receipt sent → Balance updated in real-time</p>
           </div>
         </div>
       </div>

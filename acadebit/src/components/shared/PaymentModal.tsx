@@ -25,18 +25,18 @@ export default function PaymentModal({ amount = 25200, onClose }: { amount?: num
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
-      <div className="relative w-full max-w-sm" style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: "var(--radius)", boxShadow: "0 8px 32px rgba(0,0,0,.5)" }}>
+      <div className="relative w-full max-w-sm" style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: "var(--radius)", boxShadow: "var(--shadow-lg)" }}>
         <div className="flex items-center justify-between p-4 border-b" style={{ borderColor: "var(--border)" }}>
           <div className="flex items-center gap-2" style={{ color: "var(--text)" }}>
             <Smartphone size={18} style={{ color: "var(--green)" }} />
             <span className="font-semibold">Pay via M-Pesa</span>
           </div>
-          <button onClick={onClose} style={{ color: "var(--text-muted)", background: "none", border: "none", cursor: "pointer" }}><X size={18} /></button>
+          <button onClick={onClose} style={{ color: "var(--muted)", background: "none", border: "none", cursor: "pointer" }}><X size={18} /></button>
         </div>
 
         <div className="p-4 flex flex-col gap-3">
           <div>
-            <label style={{ color: "var(--text-muted)", fontSize: 12, display: "block", marginBottom: 4 }}>M-Pesa Number</label>
+            <label style={{ color: "var(--muted)", fontSize: 12, display: "block", marginBottom: 4 }}>M-Pesa Number</label>
             <input
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
@@ -45,7 +45,7 @@ export default function PaymentModal({ amount = 25200, onClose }: { amount?: num
           </div>
 
           <div>
-            <label style={{ color: "var(--text-muted)", fontSize: 12, display: "block", marginBottom: 6 }}>Quick Amount</label>
+            <label style={{ color: "var(--muted)", fontSize: 12, display: "block", marginBottom: 6 }}>Quick Amount</label>
             <div className="flex gap-2">
               {quick.map((q, i) => (
                 <button
@@ -79,7 +79,7 @@ export default function PaymentModal({ amount = 25200, onClose }: { amount?: num
               `Send STK Push — ${formatKES(selected ?? amount)}`
             )}
           </button>
-          <p style={{ color: "var(--text-muted)", fontSize: 11, textAlign: "center" }}>Installment plans available · Contact school bursar</p>
+          <p style={{ color: "var(--muted)", fontSize: 11, textAlign: "center" }}>Installment plans available · Contact school bursar</p>
         </div>
       </div>
     </div>

@@ -35,8 +35,8 @@ export default function Governance() {
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
         <div>
           <h1 style={{ color: "var(--text)", fontSize: 22, fontWeight: 800 }}>Governance Dashboard</h1>
-          <p style={{ color: "var(--text-muted)", fontSize: 13 }}>Mr. Samuel Kariuki (Chairman) · Mwangaza Junior Academy</p>
-          <p style={{ color: "var(--text-muted)", fontSize: 12 }}>Next Meeting: Friday 4 July 2026</p>
+          <p style={{ color: "var(--muted)", fontSize: 13 }}>Mr. Samuel Kariuki (Chairman) · Mwangaza Junior Academy</p>
+          <p style={{ color: "var(--muted)", fontSize: 12 }}>Next Meeting: Friday 4 July 2026</p>
         </div>
       </div>
 
@@ -49,12 +49,12 @@ export default function Governance() {
           { label: "Compliance", value: "91%", delta: "+6%", color: "var(--purple)" },
         ].map((s) => (
           <div key={s.label} className="stat-card">
-            <p style={{ color: "var(--text-muted)", fontSize: 12 }}>{s.label}</p>
+            <p style={{ color: "var(--muted)", fontSize: 12 }}>{s.label}</p>
             <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
               <p style={{ color: s.color, fontSize: 26, fontWeight: 800, fontFamily: "DM Mono" }}>{s.value}</p>
               <span style={{ color: s.delta.startsWith("+") ? "var(--green)" : "var(--red)", fontSize: 11, fontWeight: 600 }}>{s.delta}</span>
             </div>
-            <p style={{ color: "var(--text-muted)", fontSize: 10 }}>vs last term</p>
+            <p style={{ color: "var(--muted)", fontSize: 10 }}>vs last term</p>
           </div>
         ))}
       </div>
@@ -65,8 +65,8 @@ export default function Governance() {
           <h3 style={{ color: "var(--text)", fontSize: 14, fontWeight: 700, marginBottom: 16 }}>💰 Budget vs Expenditure</h3>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={BUDGET} layout="vertical" barGap={4}>
-              <XAxis type="number" tickFormatter={(v) => `${v / 1000}K`} tick={{ fill: "var(--text-muted)", fontSize: 10 }} />
-              <YAxis dataKey="cat" type="category" tick={{ fill: "var(--text-muted)", fontSize: 11 }} width={55} />
+              <XAxis type="number" tickFormatter={(v) => `${v / 1000}K`} tick={{ fill: "var(--muted)", fontSize: 10 }} />
+              <YAxis dataKey="cat" type="category" tick={{ fill: "var(--muted)", fontSize: 11 }} width={55} />
               <Tooltip
                 contentStyle={{ background: "var(--card2)", border: "1px solid var(--border)", borderRadius: 8 }}
                 formatter={(v) => [formatKES(Number(v)), ""]}
@@ -87,7 +87,7 @@ export default function Governance() {
                   <p style={{ color: "var(--text)", fontSize: 12, fontWeight: 500, flex: 1 }}>{r.title}</p>
                   <span className="badge" style={{ background: `${RES_COLORS[r.status]}20`, color: RES_COLORS[r.status], fontSize: 10, flexShrink: 0 }}>{r.status}</span>
                 </div>
-                <p style={{ color: "var(--text-muted)", fontSize: 11, marginTop: 4 }}>Votes: {r.votes}</p>
+                <p style={{ color: "var(--muted)", fontSize: 11, marginTop: 4 }}>Votes: {r.votes}</p>
               </div>
             ))}
           </div>

@@ -26,7 +26,7 @@ const LEADERBOARD = [
 const STATUS_STYLES: Record<string, { bg: string; color: string }> = {
   Done: { bg: "rgba(34,197,94,.1)", color: "var(--green)" },
   Now: { bg: "rgba(168,85,247,.1)", color: "var(--purple)" },
-  Later: { bg: "rgba(30,35,48,1)", color: "var(--text-muted)" },
+  Later: { bg: "rgba(30,35,48,1)", color: "var(--muted)" },
 };
 
 const COMP_COLORS: Record<string, string> = {
@@ -43,7 +43,7 @@ export default function LearningDash() {
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
         <div>
           <h1 style={{ color: "var(--text)", fontSize: 24, fontWeight: 800 }}>Good Morning, Brian 👋</h1>
-          <p style={{ color: "var(--text-muted)", fontSize: 13 }}>Grade 8A · Mwangaza Junior Academy · Term 2, Week 7</p>
+          <p style={{ color: "var(--muted)", fontSize: 13 }}>Grade 8A · Mwangaza Junior Academy · Term 2, Week 7</p>
         </div>
         <div className="badge" style={{ background: "rgba(245,158,11,.1)", color: "var(--amber)", fontSize: 12 }}>🔥 7-Day Streak</div>
       </div>
@@ -58,7 +58,7 @@ export default function LearningDash() {
         ].map((s) => (
           <div key={s.label} className="stat-card" style={{ textAlign: "center" }}>
             <p style={{ color: s.color, fontSize: 20, fontWeight: 800, fontFamily: "DM Mono" }}>{s.value}</p>
-            <p style={{ color: "var(--text-muted)", fontSize: 11 }}>{s.label}</p>
+            <p style={{ color: "var(--muted)", fontSize: 11 }}>{s.label}</p>
           </div>
         ))}
       </div>
@@ -78,7 +78,7 @@ export default function LearningDash() {
                 <span style={{ fontSize: 18 }}>{t.icon}</span>
                 <div style={{ flex: 1 }}>
                   <p style={{ color: "var(--text)", fontSize: 12, fontWeight: 600 }}>{t.subject}</p>
-                  <p style={{ color: "var(--text-muted)", fontSize: 11 }}>{t.topic} · {t.duration}</p>
+                  <p style={{ color: "var(--muted)", fontSize: 11 }}>{t.topic} · {t.duration}</p>
                 </div>
                 <span className="badge" style={{ background: STATUS_STYLES[t.status].bg, color: STATUS_STYLES[t.status].color, fontSize: 10 }}>
                   {t.status}
@@ -97,7 +97,7 @@ export default function LearningDash() {
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
                   <span style={{ color: "var(--text)", fontSize: 12 }}>{p.subject}</span>
                   <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-                    <span style={{ color: "var(--text-muted)", fontSize: 11 }}>{p.pct}%</span>
+                    <span style={{ color: "var(--muted)", fontSize: 11 }}>{p.pct}%</span>
                     <span className="badge" style={{ background: `${COMP_COLORS[p.label]}20`, color: COMP_COLORS[p.label], fontSize: 9 }}>{p.label}</span>
                   </div>
                 </div>
@@ -126,11 +126,11 @@ export default function LearningDash() {
                   border: l.me ? "1px solid rgba(168,85,247,.3)" : "1px solid transparent",
                 }}
               >
-                <span style={{ color: l.rank <= 3 ? "var(--amber)" : "var(--text-muted)", fontWeight: 700, fontSize: 14, width: 20 }}>
+                <span style={{ color: l.rank <= 3 ? "var(--amber)" : "var(--muted)", fontWeight: 700, fontSize: 14, width: 20 }}>
                   {l.rank === 1 ? "🥇" : l.rank === 2 ? "🥈" : l.rank === 3 ? "🥉" : `#${l.rank}`}
                 </span>
                 <span style={{ color: l.me ? "var(--purple)" : "var(--text)", fontSize: 13, flex: 1, fontWeight: l.me ? 700 : 400 }}>{l.name}</span>
-                <span style={{ color: "var(--text-muted)", fontSize: 12, fontFamily: "DM Mono" }}>{l.score}%</span>
+                <span style={{ color: "var(--muted)", fontSize: 12, fontFamily: "DM Mono" }}>{l.score}%</span>
               </div>
             ))}
           </div>

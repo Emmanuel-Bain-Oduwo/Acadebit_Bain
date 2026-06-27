@@ -10,7 +10,7 @@ export default function StaffView() {
     <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
       <div>
         <h1 style={{ color: "var(--text)", fontSize: 22, fontWeight: 800 }}>Staff & AutoTable™</h1>
-        <p style={{ color: "var(--text-muted)", fontSize: 13 }}>Staff directory, attendance & smart timetable</p>
+        <p style={{ color: "var(--muted)", fontSize: 13 }}>Staff directory, attendance & smart timetable</p>
       </div>
 
       {/* Stats */}
@@ -23,7 +23,7 @@ export default function StaffView() {
         ].map((s) => (
           <div key={s.label} className="stat-card" style={{ textAlign: "center" }}>
             <p style={{ color: s.color, fontSize: 26, fontWeight: 800, fontFamily: "DM Mono" }}>{s.value}</p>
-            <p style={{ color: "var(--text-muted)", fontSize: 12 }}>{s.label}</p>
+            <p style={{ color: "var(--muted)", fontSize: 12 }}>{s.label}</p>
           </div>
         ))}
       </div>
@@ -35,7 +35,7 @@ export default function StaffView() {
           <thead>
             <tr>
               {["Name", "Role", "Subjects", "Class", "TSC Number", "Status"].map((h) => (
-                <th key={h} style={{ color: "var(--text-muted)", fontSize: 11, fontWeight: 600, padding: "8px 12px", textAlign: "left", borderBottom: "1px solid var(--border)" }}>{h}</th>
+                <th key={h} style={{ color: "var(--muted)", fontSize: 11, fontWeight: 600, padding: "8px 12px", textAlign: "left", borderBottom: "1px solid var(--border)" }}>{h}</th>
               ))}
             </tr>
           </thead>
@@ -43,10 +43,10 @@ export default function StaffView() {
             {STAFF.map((s, i) => (
               <tr key={s.id} style={{ background: i % 2 === 0 ? "transparent" : "var(--card2)" }}>
                 <td style={{ color: "var(--text)", fontSize: 13, fontWeight: 500, padding: "10px 12px" }}>{s.name}</td>
-                <td style={{ color: "var(--text-muted)", fontSize: 12, padding: "10px 12px" }}>{s.role}</td>
-                <td style={{ color: "var(--text-muted)", fontSize: 12, padding: "10px 12px" }}>{s.subjects}</td>
-                <td style={{ color: "var(--text-muted)", fontSize: 12, padding: "10px 12px" }}>{s.class}</td>
-                <td style={{ color: "var(--text-muted)", fontSize: 11, fontFamily: "DM Mono", padding: "10px 12px" }}>{s.tsc}</td>
+                <td style={{ color: "var(--muted)", fontSize: 12, padding: "10px 12px" }}>{s.role}</td>
+                <td style={{ color: "var(--muted)", fontSize: 12, padding: "10px 12px" }}>{s.subjects}</td>
+                <td style={{ color: "var(--muted)", fontSize: 12, padding: "10px 12px" }}>{s.class}</td>
+                <td style={{ color: "var(--muted)", fontSize: 11, fontFamily: "DM Mono", padding: "10px 12px" }}>{s.tsc}</td>
                 <td style={{ padding: "10px 12px" }}>
                   <span className="badge" style={{ background: `${statusColor(s.status)}20`, color: statusColor(s.status) }}>
                     {s.status.toUpperCase()}
@@ -64,7 +64,7 @@ export default function StaffView() {
           <span style={{ fontSize: 20 }}>🗓️</span>
           <p style={{ color: "var(--purple)", fontWeight: 700, fontSize: 14 }}>AutoTable™ — AI Timetable Engine</p>
         </div>
-        <p style={{ color: "var(--text-muted)", fontSize: 13 }}>
+        <p style={{ color: "var(--muted)", fontSize: 13 }}>
           AutoTable™ automatically generates conflict-free timetables considering teacher availability, subject loads, CBC strand requirements, and room capacities. When a teacher is absent, it instantly reassigns periods to available substitutes — no manual rescheduling needed.
         </p>
         <button

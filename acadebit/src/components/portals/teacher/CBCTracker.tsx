@@ -25,7 +25,7 @@ export default function CBCTracker() {
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-start", gap: 12 }}>
         <div>
           <h1 style={{ color: "var(--text)", fontSize: 22, fontWeight: 800 }}>CBC Tracker & Classes</h1>
-          <p style={{ color: "var(--text-muted)", fontSize: 13 }}>Mr. James Mwangi · Mathematics · Grade 8A · Term 2</p>
+          <p style={{ color: "var(--muted)", fontSize: 13 }}>Mr. James Mwangi · Mathematics · Grade 8A · Term 2</p>
         </div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
           {[
@@ -36,7 +36,7 @@ export default function CBCTracker() {
           ].map((s) => (
             <div key={s.l} className="card2" style={{ padding: "8px 14px", textAlign: "center" }}>
               <p style={{ color: s.c, fontSize: 18, fontWeight: 800, fontFamily: "DM Mono" }}>{s.v}</p>
-              <p style={{ color: "var(--text-muted)", fontSize: 10 }}>{s.l}</p>
+              <p style={{ color: "var(--muted)", fontSize: 10 }}>{s.l}</p>
             </div>
           ))}
         </div>
@@ -46,7 +46,7 @@ export default function CBCTracker() {
       <div className="card" style={{ overflowX: "auto" }}>
         <h3 style={{ color: "var(--text)", fontSize: 14, fontWeight: 700, marginBottom: 12 }}>
           📊 CBC Competency — Grade 8A · Week 7
-          <span style={{ marginLeft: 8, fontSize: 11, color: "var(--text-muted)", fontWeight: 400 }}>
+          <span style={{ marginLeft: 8, fontSize: 11, color: "var(--muted)", fontWeight: 400 }}>
             EE=Exceeds ME=Meets AE=Approaching BE=Below
           </span>
         </h3>
@@ -54,7 +54,7 @@ export default function CBCTracker() {
           <thead>
             <tr>
               {["Student", "Algebra", "Geometry", "Statistics", "Overall", "Attendance"].map((h) => (
-                <th key={h} style={{ color: "var(--text-muted)", fontSize: 11, fontWeight: 600, padding: "8px 12px", textAlign: "left", borderBottom: "1px solid var(--border)" }}>{h}</th>
+                <th key={h} style={{ color: "var(--muted)", fontSize: 11, fontWeight: 600, padding: "8px 12px", textAlign: "left", borderBottom: "1px solid var(--border)" }}>{h}</th>
               ))}
             </tr>
           </thead>
@@ -96,7 +96,7 @@ export default function CBCTracker() {
                 border: w.current ? "1px solid rgba(59,130,246,.3)" : "1px solid transparent",
               }}
             >
-              <span style={{ color: "var(--text-muted)", fontSize: 11, fontFamily: "DM Mono", width: 30 }}>{w.week}</span>
+              <span style={{ color: "var(--muted)", fontSize: 11, fontFamily: "DM Mono", width: 30 }}>{w.week}</span>
               <span style={{ color: w.current ? "var(--blue)" : "var(--text)", fontSize: 13, flex: 1, fontWeight: w.current ? 600 : 400 }}>{w.topic}</span>
               {w.done ? <span style={{ color: "var(--green)" }}>✓</span> : w.current ? <span className="badge" style={{ background: "rgba(59,130,246,.1)", color: "var(--blue)", fontSize: 10 }}>NOW</span> : null}
             </div>
@@ -108,8 +108,8 @@ export default function CBCTracker() {
           <h3 style={{ color: "var(--text)", fontSize: 14, fontWeight: 700, marginBottom: 16 }}>📈 Class Performance by Subject</h3>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={SUBJECT_PERF} layout="vertical">
-              <XAxis type="number" domain={[0, 100]} tick={{ fill: "var(--text-muted)", fontSize: 11 }} />
-              <YAxis dataKey="subject" type="category" tick={{ fill: "var(--text-muted)", fontSize: 11 }} width={60} />
+              <XAxis type="number" domain={[0, 100]} tick={{ fill: "var(--muted)", fontSize: 11 }} />
+              <YAxis dataKey="subject" type="category" tick={{ fill: "var(--muted)", fontSize: 11 }} width={60} />
               <Tooltip contentStyle={{ background: "var(--card2)", border: "1px solid var(--border)", borderRadius: 8 }} />
               <Bar dataKey="score" fill="var(--blue)" radius={[0, 4, 4, 0]} />
             </BarChart>

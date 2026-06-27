@@ -121,7 +121,7 @@ export default function AIStudio() {
               <p style={{ color: "var(--text)", fontSize: 13, fontWeight: 700 }}>{t.title}</p>
               <span className="badge" style={{ background: `${t.color}15`, color: t.color, fontSize: 9 }}>AI</span>
             </div>
-            <p style={{ color: "var(--text-muted)", fontSize: 11, lineHeight: 1.4 }}>{t.desc}</p>
+            <p style={{ color: "var(--muted)", fontSize: 11, lineHeight: 1.4 }}>{t.desc}</p>
           </button>
         ))}
       </div>
@@ -138,7 +138,7 @@ export default function AIStudio() {
           ].map((t) => (
             <div key={t.label} style={{ textAlign: "center", padding: 12, background: "var(--card2)", borderRadius: 8 }}>
               <p style={{ color: t.color, fontSize: 28, fontWeight: 800, fontFamily: "DM Mono" }}>{t.hours} hrs</p>
-              <p style={{ color: "var(--text-muted)", fontSize: 11 }}>{t.label}</p>
+              <p style={{ color: "var(--muted)", fontSize: 11 }}>{t.label}</p>
             </div>
           ))}
         </div>

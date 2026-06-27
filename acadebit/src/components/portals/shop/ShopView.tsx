@@ -30,8 +30,8 @@ export default function ShopView() {
     <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
       <div>
         <h1 style={{ color: "var(--text)", fontSize: 22, fontWeight: 800 }}>Acadebit Shop 🛒</h1>
-        {tab === "Textbooks" && <p style={{ color: "var(--text-muted)", fontSize: 13 }}>Recommended for Grade 8 · Brian Omondi</p>}
-        {tab === "Uniforms" && <p style={{ color: "var(--text-muted)", fontSize: 13 }}>Uniforms — Mwangaza Junior Academy</p>}
+        {tab === "Textbooks" && <p style={{ color: "var(--muted)", fontSize: 13 }}>Recommended for Grade 8 · Brian Omondi</p>}
+        {tab === "Uniforms" && <p style={{ color: "var(--muted)", fontSize: 13 }}>Uniforms — Mwangaza Junior Academy</p>}
       </div>
 
       {/* Category Tabs */}
@@ -42,7 +42,7 @@ export default function ShopView() {
             onClick={() => setTab(t)}
             style={{
               background: tab === t ? "var(--orange)" : "var(--card2)",
-              color: tab === t ? "#fff" : "var(--text-muted)",
+              color: tab === t ? "#fff" : "var(--muted)",
               border: `1px solid ${tab === t ? "var(--orange)" : "var(--border)"}`,
               borderRadius: 100, padding: "6px 16px", fontSize: 13, fontWeight: tab === t ? 600 : 400, cursor: "pointer",
             }}
@@ -51,7 +51,7 @@ export default function ShopView() {
           </button>
         ))}
         {["Stationery", "Sports"].map((t) => (
-          <button key={t} style={{ background: "var(--card2)", color: "var(--text-muted)", border: "1px solid var(--border)", borderRadius: 100, padding: "6px 16px", fontSize: 13, cursor: "not-allowed", opacity: 0.5 }}>
+          <button key={t} style={{ background: "var(--card2)", color: "var(--muted)", border: "1px solid var(--border)", borderRadius: 100, padding: "6px 16px", fontSize: 13, cursor: "not-allowed", opacity: 0.5 }}>
             {t} <span style={{ fontSize: 9 }}>Soon</span>
           </button>
         ))}
@@ -66,7 +66,7 @@ export default function ShopView() {
               <div key={i} style={{ textAlign: "center", padding: "10px 16px", background: "var(--card2)", borderRadius: 8, minWidth: 120 }}>
                 <div style={{ fontSize: 24, marginBottom: 4 }}>{s.icon}</div>
                 <p style={{ color: "var(--text)", fontSize: 11, fontWeight: 500 }}>Step {i + 1}</p>
-                <p style={{ color: "var(--text-muted)", fontSize: 10 }}>{s.label}</p>
+                <p style={{ color: "var(--muted)", fontSize: 10 }}>{s.label}</p>
               </div>
             ))}
           </div>
@@ -82,7 +82,7 @@ export default function ShopView() {
               <div key={i} style={{ textAlign: "center", padding: "10px 16px", background: "var(--card2)", borderRadius: 8, minWidth: 120 }}>
                 <div style={{ fontSize: 24, marginBottom: 4 }}>{s.icon}</div>
                 <p style={{ color: "var(--text)", fontSize: 11, fontWeight: 500 }}>Step {i + 1}</p>
-                <p style={{ color: "var(--text-muted)", fontSize: 10 }}>{s.label}</p>
+                <p style={{ color: "var(--muted)", fontSize: 10 }}>{s.label}</p>
               </div>
             ))}
           </div>
@@ -100,7 +100,7 @@ export default function ShopView() {
             onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "var(--border)"; (e.currentTarget as HTMLElement).style.transform = ""; }}
           >
             <div style={{ textAlign: "center", fontSize: 36, marginBottom: 12 }}>{p.icon}</div>
-            {p.publisher && <p style={{ color: "var(--text-muted)", fontSize: 10, marginBottom: 4 }}>{p.publisher}</p>}
+            {p.publisher && <p style={{ color: "var(--muted)", fontSize: 10, marginBottom: 4 }}>{p.publisher}</p>}
             <p style={{ color: "var(--text)", fontSize: 13, fontWeight: 600, marginBottom: 8 }}>{p.name}</p>
             <p style={{ color: "var(--orange)", fontSize: 18, fontWeight: 800, fontFamily: "DM Mono", marginBottom: 12 }}>{formatKES(p.price)}</p>
             <button

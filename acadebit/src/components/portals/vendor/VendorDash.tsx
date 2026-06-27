@@ -21,7 +21,7 @@ export default function VendorDash() {
     <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
       <div>
         <h1 style={{ color: "var(--text)", fontSize: 22, fontWeight: 800 }}>Vendor Dashboard</h1>
-        <p style={{ color: "var(--text-muted)", fontSize: 13 }}>Acadebit Marketplace · M-Pesa Settlements</p>
+        <p style={{ color: "var(--muted)", fontSize: 13 }}>Acadebit Marketplace · M-Pesa Settlements</p>
       </div>
 
       {/* Stats */}
@@ -33,10 +33,10 @@ export default function VendorDash() {
           { label: "Rating", value: "4.8 ⭐", color: "var(--amber)" },
         ].map((s) => (
           <div key={s.label} className="stat-card">
-            <p style={{ color: "var(--text-muted)", fontSize: 11 }}>{s.label}</p>
+            <p style={{ color: "var(--muted)", fontSize: 11 }}>{s.label}</p>
             <p style={{ color: s.color, fontSize: 22, fontWeight: 800, fontFamily: "DM Mono" }}>{s.value}</p>
             {s.delta && <span style={{ color: "var(--green)", fontSize: 11, fontWeight: 600 }}>{s.delta}</span>}
-            {s.sub && <span style={{ color: "var(--text-muted)", fontSize: 11 }}>{s.sub}</span>}
+            {s.sub && <span style={{ color: "var(--muted)", fontSize: 11 }}>{s.sub}</span>}
           </div>
         ))}
       </div>
@@ -48,8 +48,8 @@ export default function VendorDash() {
           <ResponsiveContainer width="100%" height={180}>
             <LineChart data={VENDOR_REVENUE}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border)" />
-              <XAxis dataKey="month" tick={{ fill: "var(--text-muted)", fontSize: 10 }} />
-              <YAxis tickFormatter={(v) => `${v / 1000}K`} tick={{ fill: "var(--text-muted)", fontSize: 10 }} />
+              <XAxis dataKey="month" tick={{ fill: "var(--muted)", fontSize: 10 }} />
+              <YAxis tickFormatter={(v) => `${v / 1000}K`} tick={{ fill: "var(--muted)", fontSize: 10 }} />
               <Tooltip contentStyle={{ background: "var(--card2)", border: "1px solid var(--border)", borderRadius: 8 }} formatter={(v) => [formatKES(Number(v)), "Revenue"]} />
               <Line type="monotone" dataKey="revenue" stroke="var(--pink)" strokeWidth={2} dot={{ fill: "var(--pink)", r: 3 }} />
             </LineChart>
@@ -63,16 +63,16 @@ export default function VendorDash() {
             <thead>
               <tr>
                 {["Order #", "Product", "Buyer", "Amount", "Status"].map((h) => (
-                  <th key={h} style={{ color: "var(--text-muted)", fontSize: 10, fontWeight: 600, padding: "6px 8px", textAlign: "left", borderBottom: "1px solid var(--border)" }}>{h}</th>
+                  <th key={h} style={{ color: "var(--muted)", fontSize: 10, fontWeight: 600, padding: "6px 8px", textAlign: "left", borderBottom: "1px solid var(--border)" }}>{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {VENDOR_ORDERS.map((o, i) => (
                 <tr key={o.id} style={{ background: i % 2 === 0 ? "transparent" : "var(--card2)" }}>
-                  <td style={{ color: "var(--text-muted)", fontSize: 11, fontFamily: "DM Mono", padding: "8px" }}>{o.id}</td>
+                  <td style={{ color: "var(--muted)", fontSize: 11, fontFamily: "DM Mono", padding: "8px" }}>{o.id}</td>
                   <td style={{ color: "var(--text)", fontSize: 11, padding: "8px" }}>{o.product}</td>
-                  <td style={{ color: "var(--text-muted)", fontSize: 11, padding: "8px" }}>{o.buyer}</td>
+                  <td style={{ color: "var(--muted)", fontSize: 11, padding: "8px" }}>{o.buyer}</td>
                   <td style={{ color: "var(--pink)", fontSize: 11, fontFamily: "DM Mono", padding: "8px" }}>{formatKES(o.amount)}</td>
                   <td style={{ padding: "8px" }}>
                     <span className="badge" style={{ background: `${statusColor(o.status)}20`, color: statusColor(o.status), fontSize: 9 }}>
@@ -110,10 +110,10 @@ export default function VendorDash() {
           {/* M-Pesa Settlement */}
           <div style={{ marginTop: 16, padding: 12, background: "rgba(34,197,94,.05)", border: "1px solid rgba(34,197,94,.15)", borderRadius: 8 }}>
             <p style={{ color: "var(--green)", fontWeight: 700, fontSize: 12, marginBottom: 4 }}>💰 M-Pesa Settlement</p>
-            <p style={{ color: "var(--text-muted)", fontSize: 11, lineHeight: 1.5 }}>
+            <p style={{ color: "var(--muted)", fontSize: 11, lineHeight: 1.5 }}>
               Payments settle to your registered Safaricom M-Pesa number within 24 hours of order delivery confirmation. No bank account required.
             </p>
-            <p style={{ color: "var(--text-muted)", fontSize: 11, marginTop: 6 }}>Next settlement: <strong style={{ color: "var(--text)" }}>Monday 30 June 2026</strong></p>
+            <p style={{ color: "var(--muted)", fontSize: 11, marginTop: 6 }}>Next settlement: <strong style={{ color: "var(--text)" }}>Monday 30 June 2026</strong></p>
           </div>
         </div>
       </div>

@@ -26,20 +26,20 @@ export default function CartModal() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setCartOpen(false)} />
-      <div className="relative w-full max-w-sm" style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: "var(--radius)", boxShadow: "0 8px 32px rgba(0,0,0,.5)" }}>
+      <div className="relative w-full max-w-sm" style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: "var(--radius)", boxShadow: "var(--shadow-lg)" }}>
         <div className="flex items-center justify-between p-4 border-b" style={{ borderColor: "var(--border)" }}>
           <div className="flex items-center gap-2" style={{ color: "var(--text)" }}>
             <ShoppingCart size={18} style={{ color: "var(--orange)" }} />
             <span className="font-semibold">Cart ({cart.length})</span>
           </div>
-          <button onClick={() => setCartOpen(false)} style={{ color: "var(--text-muted)", background: "none", border: "none", cursor: "pointer" }}>
+          <button onClick={() => setCartOpen(false)} style={{ color: "var(--muted)", background: "none", border: "none", cursor: "pointer" }}>
             <X size={18} />
           </button>
         </div>
 
         <div className="p-4" style={{ maxHeight: 300, overflowY: "auto" }}>
           {cart.length === 0 ? (
-            <p style={{ color: "var(--text-muted)", textAlign: "center", padding: "2rem 0", fontSize: 14 }}>Your cart is empty</p>
+            <p style={{ color: "var(--muted)", textAlign: "center", padding: "2rem 0", fontSize: 14 }}>Your cart is empty</p>
           ) : (
             <div className="flex flex-col gap-2">
               {cart.map((item) => (
@@ -60,7 +60,7 @@ export default function CartModal() {
         {cart.length > 0 && (
           <div className="p-4 border-t" style={{ borderColor: "var(--border)" }}>
             <div className="flex justify-between mb-3">
-              <span style={{ color: "var(--text-muted)", fontSize: 13 }}>Total</span>
+              <span style={{ color: "var(--muted)", fontSize: 13 }}>Total</span>
               <span style={{ color: "var(--green)", fontWeight: 700, fontFamily: "DM Mono, monospace" }}>{formatKES(total)}</span>
             </div>
             <div className="flex gap-2">

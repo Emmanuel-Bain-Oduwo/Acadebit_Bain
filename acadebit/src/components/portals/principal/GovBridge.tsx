@@ -30,7 +30,7 @@ export default function GovBridge() {
     <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
       <div>
         <h1 style={{ color: "var(--text)", fontSize: 22, fontWeight: 800 }}>GovBridge™ Reports</h1>
-        <p style={{ color: "var(--text-muted)", fontSize: 13 }}>Ministry compliance, NEMIS sync & government reporting</p>
+        <p style={{ color: "var(--muted)", fontSize: 13 }}>Ministry compliance, NEMIS sync & government reporting</p>
       </div>
 
       {/* Stats */}
@@ -43,7 +43,7 @@ export default function GovBridge() {
         ].map((s) => (
           <div key={s.label} className="stat-card" style={{ textAlign: "center" }}>
             <p style={{ color: s.color, fontSize: 26, fontWeight: 800, fontFamily: "DM Mono" }}>{s.value}</p>
-            <p style={{ color: "var(--text-muted)", fontSize: 12 }}>{s.label}</p>
+            <p style={{ color: "var(--muted)", fontSize: 12 }}>{s.label}</p>
           </div>
         ))}
       </div>
@@ -88,7 +88,7 @@ export default function GovBridge() {
                   style={{ fontSize: 11, padding: "4px 10px", color: done.has(r.name) ? "var(--green)" : undefined, borderColor: done.has(r.name) ? "var(--green)" : undefined }}
                 >
                   {loading === r.name ? (
-                    <span className="spinner" style={{ width: 12, height: 12, border: "2px solid var(--text-muted)", borderTopColor: "transparent", borderRadius: "50%", display: "inline-block" }} />
+                    <span className="spinner" style={{ width: 12, height: 12, border: "2px solid var(--muted)", borderTopColor: "transparent", borderRadius: "50%", display: "inline-block" }} />
                   ) : done.has(r.name) ? "✓ Done" : "Generate"}
                 </button>
               </div>
