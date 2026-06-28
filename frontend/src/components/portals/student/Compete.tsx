@@ -66,7 +66,7 @@ export default function Compete() {
       </div>
 
       {/* Competition types */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: 12 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(250px, 100%), 1fr))", gap: 12 }}>
         {COMPETITIONS.map((c) => (
           <div key={c.type} className="card" style={{ borderLeft: `4px solid ${c.color}` }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
@@ -168,7 +168,7 @@ export default function Compete() {
       </div>
 
       {/* Badges & Gamification */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(300px, 100%), 1fr))", gap: 16 }}>
         <div className="card">
           <h3 style={{ color: "var(--navy)", fontSize: 14, fontWeight: 700, marginBottom: 14 }}>🏅 Badges & Achievements</h3>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>

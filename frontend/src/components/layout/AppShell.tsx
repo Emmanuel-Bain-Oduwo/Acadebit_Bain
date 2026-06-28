@@ -82,7 +82,7 @@ export default function AppShell() {
       <Sidebar />
       <div style={{ flex: 1, marginLeft: 0, display: "flex", flexDirection: "column" }} className="md:ml-[210px]">
         <Header />
-        <main style={{ flex: 1, padding: "20px 20px", overflowY: "auto", maxWidth: 1400 }}>
+        <main className="app-main">
           <ViewComponent />
         </main>
       </div>

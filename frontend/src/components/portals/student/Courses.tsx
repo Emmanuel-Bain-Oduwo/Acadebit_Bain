@@ -99,7 +99,7 @@ export default function Courses() {
       </div>
 
       {/* Content grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 14 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(300px, 100%), 1fr))", gap: 14 }}>
         {filtered.map((c) => {
           const meta = TYPE_META[c.type];
           const isActive = active === c.id;

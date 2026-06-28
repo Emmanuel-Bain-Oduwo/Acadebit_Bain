@@ -90,7 +90,7 @@ export default function ShopView() {
       )}
 
       {/* Product Grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(210px, 1fr))", gap: 14 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(210px, 100%), 1fr))", gap: 14 }}>
         {products.map((p) => (
           <div
             key={p.id}

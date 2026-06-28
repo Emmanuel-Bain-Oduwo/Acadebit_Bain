@@ -60,7 +60,7 @@ export default function MyChild() {
         <span className="badge" style={{ background: "rgba(34,197,94,.1)", color: "var(--green)" }}>✅ On Campus · Arrived 7:02 AM</span>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(300px, 100%), 1fr))", gap: 16 }}>
         {/* Subject Progress */}
         <div className="card">
           <h3 style={{ color: "var(--text)", fontSize: 14, fontWeight: 700, marginBottom: 12 }}>📊 Academic Progress</h3>

@@ -108,8 +108,8 @@ export default function Landing() {
 
       {/* HERO */}
       <section style={{ background: "linear-gradient(135deg, #fff 60%, #e8edf4 100%)", borderBottom: "1px solid var(--border)", overflow: "hidden" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "60px 24px 0", display: "grid", gridTemplateColumns: "1fr auto", gap: 40, alignItems: "flex-end" }}>
-          <div style={{ paddingBottom: 60, maxWidth: 600 }}>
+        <div className="hero-grid" style={{ maxWidth: 1280, margin: "0 auto", padding: "60px 24px 0" }}>
+          <div className="hero-text" style={{ paddingBottom: 60, maxWidth: 600 }}>
             <div className="section-label" style={{ marginBottom: 20 }}>⭐ Your School&apos;s Digital Backbone</div>
 
             <h1 style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)", fontWeight: 800, color: "var(--navy)", lineHeight: 1.15, marginBottom: 20 }}>
@@ -145,7 +145,7 @@ export default function Landing() {
           </div>
 
           {/* Hero Card — Portal Picker */}
-          <div style={{
+          <div className="hero-card" style={{
             background: "#fff",
             borderRadius: "16px 16px 0 0",
             boxShadow: "0 -4px 40px rgba(26,51,101,.15)",
@@ -216,7 +216,7 @@ export default function Landing() {
           <p style={{ color: "var(--muted)", fontSize: 15, maxWidth: 500, margin: "0 auto" }}>Each user type gets a personalised workspace built for their specific needs</p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(260px, 100%), 1fr))", gap: 16 }}>
           {PORTALS.map((p) => (
             <button
               key={p.id}
@@ -266,7 +266,7 @@ export default function Landing() {
             <p style={{ color: "rgba(255,255,255,.6)", fontSize: 15, maxWidth: 500, margin: "0 auto" }}>Every feature is designed with Kenyan school realities in mind</p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: 16 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(280px, 100%), 1fr))", gap: 16 }}>
             {WHY.map((w, i) => (
               <div key={i} style={{ background: "rgba(255,255,255,.06)", border: "1px solid rgba(255,255,255,.1)", borderRadius: 14, padding: "22px", transition: "all 0.2s" }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,.1)"; }}
@@ -290,7 +290,7 @@ export default function Landing() {
           <h2 style={{ color: "var(--navy)", fontSize: "clamp(1.5rem, 3vw, 2.2rem)", fontWeight: 800 }}>Trusted by Kenyan Schools</h2>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 20 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(300px, 100%), 1fr))", gap: 20 }}>
           {TESTIMONIALS.map((t, i) => (
             <div key={i} className="card" style={{ position: "relative" }}>
               <div style={{ fontSize: 36, color: "var(--yellow)", fontFamily: "Georgia, serif", lineHeight: 1, marginBottom: 12 }}>&ldquo;</div>
@@ -346,7 +346,7 @@ export default function Landing() {
       {/* FOOTER */}
       <footer style={{ background: "var(--navy-dark)", color: "rgba(255,255,255,.7)", padding: "40px 24px 24px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 32, marginBottom: 32, flexWrap: "wrap" }}>
+          <div className="footer-grid">
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
                 <div style={{ width: 34, height: 34, borderRadius: 8, background: "var(--yellow)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 800, fontSize: 16 }}>A</div>

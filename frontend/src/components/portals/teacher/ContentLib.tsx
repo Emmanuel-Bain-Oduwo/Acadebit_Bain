@@ -84,7 +84,7 @@ export default function ContentLib() {
       {showUpload && (
         <div className="card" style={{ border: "2px dashed var(--border)", background: "var(--bg)" }}>
           <h3 style={{ color: "var(--navy)", fontSize: 14, fontWeight: 700, marginBottom: 12 }}>📤 Upload New Content</h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 12 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(220px, 100%), 1fr))", gap: 12 }}>
             <div>
               <label style={{ color: "var(--muted)", fontSize: 11, display: "block", marginBottom: 4 }}>Title</label>
               <input className="input" placeholder="e.g. Algebra — Grade 8 Notes" />
@@ -174,7 +174,7 @@ export default function ContentLib() {
       </div>
 
       {/* Content Grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 14 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(300px, 100%), 1fr))", gap: 14 }}>
         {filtered.map((item) => {
           const meta = TYPE_META[item.type];
           const isPub = published[item.id];

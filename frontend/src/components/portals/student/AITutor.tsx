@@ -64,7 +64,7 @@ export default function AITutor() {
     <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
       <h1 style={{ color: "var(--text)", fontSize: 22, fontWeight: 800 }}>AI Tutor & Flashcards</h1>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: 16 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(340px, 100%), 1fr))", gap: 16 }}>
         {/* Chat */}
         <div className="card" style={{ display: "flex", flexDirection: "column", height: 480 }}>
           <h3 style={{ color: "var(--text)", fontSize: 14, fontWeight: 700, marginBottom: 12 }}>💬 AI Tutor Chat</h3>

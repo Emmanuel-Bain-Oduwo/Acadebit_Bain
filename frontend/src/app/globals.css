@@ -272,3 +272,77 @@ body {
   .sidebar, .header, .fab { display: none !important; }
   body { background: white; color: black; }
 }
+
+/* ─── Responsive layout helpers ─────────────── */
+
+/* Hero grid (landing page) — two-col on desktop, stacked on mobile */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: flex-end;
+}
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; padding-bottom: 40px !important; }
+  .hero-card { display: none !important; }
+}
+
+/* Footer grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* App shell main area */
+.app-main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-width: 1400px;
+}
+
+/* ─── Mobile overrides ───────────────────────── */
+@media (max-width: 768px) {
+  .card { padding: 1rem; }
+
+  /* Reduce section padding on mobile */
+  .app-main { padding: 14px; }
+
+  /* Smaller h1 in portals */
+  .app-main h1 { font-size: 18px !important; }
+
+  /* Stats strip wraps tightly */
+  .stats-bar > div { gap: 12px; padding: 14px 16px; }
+
+  /* Prevent wide tables from breaking layout */
+  table { display: block; overflow-x: auto; }
+}
+
+@media (max-width: 480px) {
+  .card { padding: 0.875rem; border-radius: 12px; }
+
+  /* Touch-friendly buttons */
+  .btn { padding: 9px 16px; font-size: 13px; }
+
+  /* Inline-flex badges stay small */
+  .badge { font-size: 10px; padding: 2px 8px; }
+
+  /* Landing hero padding */
+  .hero-text { padding-bottom: 0 !important; }
+}
+
+/* Ensure grids don't overflow on narrow screens */
+@media (max-width: 400px) {
+  /* Very small screens: force min-width grids to single column */
+  [class*="grid"] { min-width: 0; }
+  * { min-width: 0; }
+}
