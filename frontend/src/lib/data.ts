@@ -43,6 +43,8 @@ export const PORTALS: Portal[] = [
       { id: "aitutor", icon: "💬", label: "AI Tutor & Flashcards" },
       { id: "pastpapers", icon: "📄", label: "Past Papers Hub" },
       { id: "compete", icon: "🏆", label: "Competitions" },
+      { id: "saistudio", icon: "✨", label: "AI Studio" },
+      { id: "guidedlearning", icon: "🗺️", label: "Guided Learning" },
     ],
   },
   {

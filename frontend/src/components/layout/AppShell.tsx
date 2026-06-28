@@ -21,6 +21,8 @@ import Courses from "@/components/portals/student/Courses";
 import Compete from "@/components/portals/student/Compete";
 import AITutor from "@/components/portals/student/AITutor";
 import PastPapers from "@/components/portals/student/PastPapers";
+import StudentAIStudio from "@/components/portals/student/StudentAIStudio";
+import GuidedLearning from "@/components/portals/student/GuidedLearning";
 import MyChild from "@/components/portals/parent/MyChild";
 import Governance from "@/components/portals/bom/Governance";
 import NationalDash from "@/components/portals/moe/National";
@@ -42,6 +44,8 @@ const VIEW_MAP: Record<string, React.ComponentType> = {
   compete: Compete,
   aitutor: AITutor,
   pastpapers: PastPapers,
+  saistudio: StudentAIStudio,
+  guidedlearning: GuidedLearning,
   mychild: MyChild,
   buytextbooks: ShopView,
   buyuniforms: ShopView,
