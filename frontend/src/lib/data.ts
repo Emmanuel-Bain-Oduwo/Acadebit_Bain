@@ -26,6 +26,8 @@ export const PORTALS: Portal[] = [
     views: [
       { id: "cbctracker", icon: "📋", label: "CBC Tracker & Classes" },
       { id: "aistudio", icon: "🤖", label: "AI Teacher Studio" },
+      { id: "contentlib", icon: "📦", label: "Content Library" },
+      { id: "analytics", icon: "📈", label: "Class Analytics" },
     ],
   },
   {
@@ -37,8 +39,10 @@ export const PORTALS: Portal[] = [
     desc: "Personalised study plan, AI tutor, flashcards & past papers",
     views: [
       { id: "learning", icon: "📖", label: "Learning Dashboard" },
+      { id: "courses", icon: "🎬", label: "Courses & Lessons" },
       { id: "aitutor", icon: "💬", label: "AI Tutor & Flashcards" },
       { id: "pastpapers", icon: "📄", label: "Past Papers Hub" },
+      { id: "compete", icon: "🏆", label: "Competitions" },
     ],
   },
   {

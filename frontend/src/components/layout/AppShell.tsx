@@ -14,7 +14,11 @@ import StaffView from "@/components/portals/principal/Staff";
 import GovBridge from "@/components/portals/principal/GovBridge";
 import CBCTracker from "@/components/portals/teacher/CBCTracker";
 import AIStudio from "@/components/portals/teacher/AIStudio";
+import Analytics from "@/components/portals/teacher/Analytics";
+import ContentLib from "@/components/portals/teacher/ContentLib";
 import LearningDash from "@/components/portals/student/Learning";
+import Courses from "@/components/portals/student/Courses";
+import Compete from "@/components/portals/student/Compete";
 import AITutor from "@/components/portals/student/AITutor";
 import PastPapers from "@/components/portals/student/PastPapers";
 import MyChild from "@/components/portals/parent/MyChild";
@@ -31,7 +35,11 @@ const VIEW_MAP: Record<string, React.ComponentType> = {
   govbridge: GovBridge,
   cbctracker: CBCTracker,
   aistudio: AIStudio,
+  analytics: Analytics,
+  contentlib: ContentLib,
   learning: LearningDash,
+  courses: Courses,
+  compete: Compete,
   aitutor: AITutor,
   pastpapers: PastPapers,
   mychild: MyChild,
