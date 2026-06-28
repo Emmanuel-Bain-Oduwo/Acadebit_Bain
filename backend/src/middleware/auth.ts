@@ -6,11 +6,16 @@ export interface AuthRequest extends Request {
 }
 
 export function authenticate(req: AuthRequest, res: Response, next: NextFunction): void {
-  const token = req.headers.authorization?.split(" ")[1];
+  // Support Bearer header (standard) and ?token= query param (for SSE EventSource)
+  const headerToken = req.headers.authorization?.split(" ")[1];
+  const queryToken = typeof req.query.token === "string" ? req.query.token : undefined;
+  const token = headerToken || queryToken;
+
   if (!token) {
     res.status(401).json({ error: "No token provided" });
     return;
   }
+
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET || "secret") as AuthRequest["user"];
     req.user = decoded;

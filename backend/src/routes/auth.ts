@@ -24,7 +24,8 @@ router.post("/login", async (req: Request, res: Response): Promise<void> => {
     const token = jwt.sign(
       { id: user.id, role: user.role, schoolId: user.school_id },
       process.env.JWT_SECRET || "secret",
-      { expiresIn: process.env.JWT_EXPIRES_IN || "7d" }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      { expiresIn: (process.env.JWT_EXPIRES_IN || "7d") as any }
     );
     res.json({ token, user: { id: user.id, name: user.name, email: user.email, role: user.role } });
   } catch (err) {
